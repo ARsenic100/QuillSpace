@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Ensure the root element and body fill the viewport */
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: Arial, sans-serif; /* Optional: set a default font */
+}
+
+/* Apply background color to the whole body */
+body {
+   /* Set the background color */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure full viewport height */
+  overflow-y: auto; /* Allow vertical scrolling when necessary */
+}
+
+/* Ensure the root container takes up full height */
+#root {
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure content area stretches to take available space */
+main {
+  flex-grow: 1; /* This allows the content to fill the available space */
+}
+
+/* Apply styling for the footer to stay at the bottom */
+/* Ensure the footer is pushed to the bottom */
+  
+  /* Footer will sit at the bottom */
+  footer {
+    margin-top: auto; /* Pushes it to the bottom */
+    width: 100%;
+    position: relative;
+  }
+  
+
+/* To remove the default scrollbar style in WebKit-based browsers */
+::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
+}
